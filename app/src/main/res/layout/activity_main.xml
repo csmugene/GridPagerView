@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <com.csmugene.gridpagerview.view.GridViewPager
+        android:id="@+id/gridViewPager"
+        android:layout_marginBottom="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </com.csmugene.gridpagerview.view.GridViewPager>
+
+    <com.csmugene.gridpagerview.view.IndicatorView
+        android:id="@+id/indicatorView"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </com.csmugene.gridpagerview.view.IndicatorView>
+</LinearLayout>
