@@ -169,20 +169,9 @@ ArrayList<String> testArr = new ArrayList<>();
 ```
 
 
-
-
-Getting Help
-------------
-To report a specific problem or feature request, [open a new issue on Github][5]. For questions, suggestions, or
-anything else, email [Glide's discussion group][6], or join our IRC channel: [irc.freenode.net#glide-library][13].
-
-Contributing
-------------
-Before submitting pull requests, contributors must sign Google's [individual contributor license agreement][7].
-
 Thanks
 ------
-* **HEO JAESEONG** and **KIM ANNA** and **PARK JINYONG**
+* **HEO JAESEONG** and **KIM ANNA** and **PARK JINYONG** and **LEE JIHOON** and **SON JIHYE**
 * SWEETTRACKER
 
 Author
