@@ -29,14 +29,15 @@ dependencies {
 
 샘플앱의 MainActivity.java와 DefaultViewActivity.java를 확인하세요.
 
-아래 사용법은 기본 사용법으로 라이브러리 내부에 있는 셀을 이용하여 화면상에 보여주게 된다.
+아래 사용법은 기본 사용법으로 라이브러리 내부에 있는 셀을 이용하여 화면상에 보여주게 됩니다.
+
 기본 사용법
 --------
 
 ```java
 // For a simple view:
-ArrayList<String> testArr = new ArrayList<>();
-    ArrayList<String> testArr2 = new ArrayList<>();
+    ArrayList<String> mImageArray = new ArrayList<>();
+    ArrayList<String> mTitleArray = new ArrayList<>();
     private final static String TAG = "DefaultViewActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,15 +46,15 @@ ArrayList<String> testArr = new ArrayList<>();
         
 
         for(int i = 1; i < 100; i++){
-            testArr.add("image path");
-            testArr2.add(String.format("%d", i));
+            mImageArray.add("image path");
+            mTitleArray.add(String.format("%d", i));
         }
 
         //top, left, right, bottom
-		int[] margin = {0, 0, 20, 0};
+        int[] margin = {0, 0, 20, 0};
 
         //ImageUrl Array, Title Array, Span, Line
-        GridConfig gridConfig = new GridConfig(testArr, testArr2 , 3, 3);
+        GridConfig gridConfig = new GridConfig(mImageArray, mTitleArray , 3, 3);
         IndicatorView indicatorView = (IndicatorView)findViewById(R.id.indicatorView);
         GridViewPager gridViewPager = (GridViewPager)findViewById(R.id.gridViewPager);
         gridViewPager.setFragmentManager(getSupportFragmentManager());
@@ -83,8 +84,8 @@ ArrayList<String> testArr = new ArrayList<>();
 --------
 
 ```java
-ArrayList<String> testArr = new ArrayList<>();
-    ArrayList<String> testArr2 = new ArrayList<>();
+    ArrayList<String> mImageArray = new ArrayList<>();
+    ArrayList<String> mTitleArray = new ArrayList<>();
     private final static String TAG = "MAINACTIVITY";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,15 +94,15 @@ ArrayList<String> testArr = new ArrayList<>();
         
 
         for(int i = 0; i < 100; i++){
-            testArr.add("image path");
-            testArr2.add(String.format("%d", i));
+            mImageArray.add("image path");
+            mTitleArray.add(String.format("%d", i));
         }
 
         //top, left, right, bottom
-		int[] margin = {0, 0, 20, 0};
+        int[] margin = {0, 0, 20, 0};
 
 		//ImageUrl Array, Title Array, Span, Line
-        GridConfig gridConfig = new GridConfig(testArr, testArr2 , 3, 3);
+        GridConfig gridConfig = new GridConfig(mImageArray, mTitleArray , 3, 3);
         IndicatorView indicatorView = (IndicatorView)findViewById(R.id.indicatorView);
         GridViewPager gridViewPager = (GridViewPager)findViewById(R.id.gridViewPager);
         gridViewPager.setFragmentManager(getSupportFragmentManager());
@@ -171,12 +172,12 @@ ArrayList<String> testArr = new ArrayList<>();
 
 Thanks
 ------
-* **HEO JAESEONG** and **KIM ANNA** and **PARK JINYONG** and **LEE JIHOON** and **SON JIHYE**
-* SWEETTRACKER
+* **LEE MINSUB** and **HEO JAESEONG** and **KIM ANNA** and **PARK JINYONG** and **LEE JIHOON** and **SON JIHYE**
+* **SWEETTRACKER**
 
 Author
 ------
-LEE CHUNGSUB
+LEE CHUNGSUB of SWEETTRACKER
 
 License
 -------
