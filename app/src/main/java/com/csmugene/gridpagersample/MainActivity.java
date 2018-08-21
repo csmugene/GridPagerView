@@ -56,13 +56,13 @@ public class MainActivity extends AppCompatActivity {
                 String imageUrl = iconUrlArrayList.get(position);
                 String title = titleArrayList.get(position);
                 ViewHolder dd = (ViewHolder)holder;
-                dd.test1.setText(title);
+                dd.textView.setText(title);
                 Glide.with(MainActivity.this)
                         .load(imageUrl)
                         .dontAnimate()
                         .diskCacheStrategy(DiskCacheStrategy.ALL)
                         .skipMemoryCache(true)
-                        .into(dd.test2);
+                        .into(dd.imageView);
             }
 
             @Override
@@ -90,13 +90,13 @@ public class MainActivity extends AppCompatActivity {
 
     public class ViewHolder extends AdapterViewHolder{
 
-        TextView test1;
-        ImageView test2;
+        TextView textView;
+        ImageView imageView;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            test1 = (TextView)itemView.findViewById(R.id.title);
-            test2 = (ImageView) itemView.findViewById(R.id.image);
+            textView = (TextView)itemView.findViewById(R.id.title);
+            imageView = (ImageView) itemView.findViewById(R.id.image);
 
         }
     }
