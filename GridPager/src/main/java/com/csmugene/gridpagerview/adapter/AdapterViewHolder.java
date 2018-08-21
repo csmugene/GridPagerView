@@ -13,8 +13,13 @@ public class AdapterViewHolder extends  RecyclerView.ViewHolder{
 
     public TextView mTitleView;
     public ImageView mImageView;
+    public int mPosition;
 
     public AdapterViewHolder(View itemView) {
         super(itemView);
+    }
+
+    public void setPosition(int position){
+        mPosition = position;
     }
 }

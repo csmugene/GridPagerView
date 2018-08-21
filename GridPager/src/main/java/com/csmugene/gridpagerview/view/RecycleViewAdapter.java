@@ -27,6 +27,7 @@ class RecycleViewAdapter extends  RecyclerView.Adapter<AdapterViewHolder>{
     private List<String> mIconUrlArrayList;
     private List<String> mTitleArrayList;
     private OnBinderViewHolderListener mOnBinderViewHolderListener;
+    private OnItemClickListener mOnItemClickListener;
 
     public RecycleViewAdapter(List<String> iconArray, List<String> titleArray, OnItemClickListener onItemClickListener){
         mIconUrlArrayList = iconArray;
@@ -38,9 +39,19 @@ class RecycleViewAdapter extends  RecyclerView.Adapter<AdapterViewHolder>{
     }
 
     public class ViewHolder extends AdapterViewHolder{
-        public ViewHolder(View itemView) {
+
+
+        public ViewHolder(final View itemView) {
             super(itemView);
             mImageView = (ImageView)itemView.findViewById(R.id.image);
+            mImageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(mOnItemClickListener != null){
+                        mOnItemClickListener.onItemClick(itemView, mPosition);
+                    }
+                }
+            });
             mTitleView = (TextView)itemView.findViewById(R.id.title);
         }
     }
@@ -62,6 +73,7 @@ class RecycleViewAdapter extends  RecyclerView.Adapter<AdapterViewHolder>{
             mOnBinderViewHolderListener.onBindViewHolder(holder, position, mIconUrlArrayList, mTitleArrayList);
             return;
         }
+        holder.setPosition(position);
         String imageUrl = mIconUrlArrayList.get(position);
         String title = mTitleArrayList.get(position);
         holder.mTitleView.setText(title);

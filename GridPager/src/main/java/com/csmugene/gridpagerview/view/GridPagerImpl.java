@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import com.csmugene.gridpagerview.R;
 import com.csmugene.gridpagerview.listener.OnBinderViewHolderListener;
 import com.csmugene.gridpagerview.listener.OnIndicatorItemClickListener;
+import com.csmugene.gridpagerview.listener.OnItemClickListener;
 import com.csmugene.gridpagerview.model.GridConfig;
 
 import java.util.ArrayList;
@@ -32,6 +33,7 @@ public class GridPagerImpl extends GridPager {
     private GridViewPager mGridViewPager;
     private ImageView[] mIndicatorList;
     private OnBinderViewHolderListener mOnBinderViewHolderListener;
+    private OnItemClickListener mOnItemClickListener;
 
     public GridPagerImpl(@NonNull Context context, @NonNull GridViewPager gridViewPager){
         mContext = context;
@@ -65,6 +67,7 @@ public class GridPagerImpl extends GridPager {
             List<String> iconList = mGridConfig.getIconArr().subList(fromIndex, toIndex);
             List<String> titleList = mGridConfig.getTitleArr().subList(fromIndex, toIndex);
             SelectionFragment selectionFragment = new SelectionFragment(iconList, titleList, mGridConfig.getSpan());
+            selectionFragment.setOnItemClickListener(mGridViewPager.getOnItemClickListener());
             selectionFragment.setOnBinderViewHolderListener(mOnBinderViewHolderListener);
             fragments.add(selectionFragment);
         }

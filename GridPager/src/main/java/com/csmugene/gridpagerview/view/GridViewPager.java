@@ -6,6 +6,7 @@ import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.csmugene.gridpagerview.listener.OnItemClickListener;
 import com.csmugene.gridpagerview.model.GridConfig;
 
 /**
@@ -16,7 +17,7 @@ public class GridViewPager extends ViewPager {
 
     private GridConfig mGridConfig;
     private FragmentManager mFragmentManager;
-
+    private OnItemClickListener mOnItemClickListener;
 
     public GridViewPager(Context context) {
         super(context);
@@ -65,5 +66,12 @@ public class GridViewPager extends ViewPager {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
 
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener){
+        mOnItemClickListener = onItemClickListener;
+    }
+
+    public OnItemClickListener getOnItemClickListener(){
+        return mOnItemClickListener;
+    }
 
 }
