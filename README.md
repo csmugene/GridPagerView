@@ -4,7 +4,6 @@ GridPager + indicator
 
 GridPagerView는 GridView와 Indicator를 손쉽게 제공합니다.
 ![](static/gridpagerviewgif.gif)
-![](static/gridpagerview.png)
 
 GridPagerView는 Glide를 포함하고 있습니다.
 
@@ -30,6 +29,7 @@ dependencies {
 
 샘플앱의 MainActivity.java와 DefaultViewActivity.java를 확인하세요.
 
+아래 사용법은 기본 사용법으로 라이브러리 내부에 있는 셀을 이용하여 화면상에 보여주게 된다.
 기본 사용법
 --------
 
