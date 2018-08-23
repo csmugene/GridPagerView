@@ -172,8 +172,7 @@ dependencies {
 
 Thanks
 ------
-* **LEE MINSUB** and **HEO JAESEONG** and **KIM ANNA** and **PARK JINYONG** and **LEE JIHOON** and **SON JIHYE**
-* **SWEETTRACKER**
+* **LEE MINSUB** and **PARK JINYONG** and **SON JIHYE** and **JT** and **BB** and **AN** and **JH**
 
 Author
 ------
